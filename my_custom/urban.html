@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            margin: 5px 0 0 0;
+        }
+        #slider,
+        ul,
+        a {
+            width: 100%;
+            height: 420px;
+        }
+
+        #slider {
+            position: absolute;
+            /* border: 2px solid black; */
+            /*padding: 3px;*/
+            margin: 0 0;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        ul {
+            position: absolute;
+            list-style-type: none;
+            width: 6000px;
+            /*transition-duration: 0.3s;*/
+        }
+
+        li {
+            float: left;
+            width: 940px;
+            height: 420px;
+        }
+
+        a {
+            /* width: 647.2px; */
+            height: 420px;
+            display: inline-block;
+        }
+        a:link, a:visited, a:active, a:hover {
+            color: #333;
+            text-decoration: none;
+        }
+
+        img {
+            height: 420px;
+            zoom: 90%;
+            /* margin-top: 25px 0; */
+            /* display: inline; */
+            vertical-align: middle;
+        }
+
+        #slider:hover .arrow-container {
+            display: block;
+        }
+
+        .arrow-container {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            top: 50%;
+            margin-top: -40px;
+            display: none;
+        }
+
+        .arrow-container span {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            /*display: inline-block;*/
+            text-align: center;
+            line-height: 50px;
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .left-arrow {
+            left: 0px;
+            cursor: pointer;
+        }
+
+        .right-arrow {
+            right: 0px;
+            cursor: pointer;
+        }
+
+        .indicator-container {
+            position: absolute;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -75px;
+            text-align: center;
+        }
+
+        .indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background: rgba(138, 134, 134, 0.3);
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background: red;
+        }
+        
+        .box {
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: row;
+            justify-content: space-between;
+            vertical-align: middle;
+            align-items: center;
+        }
+        .left-img {
+            margin-right: 25px;
+        }
+        .right-abs {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: justify;
+            font: 14px Arial, Helvetica, sans-serif, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei;
+            line-height: 1.6em;
+        }
+        .right-abs:hover {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: justify;
+            cursor: pointer;
+        }
+        .right-abs span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .f1 {flex: 1; height: 420px; flex-shrink: 0;}
+        .f2 {flex: 2; height: 420px; flex-shrink: 0;}
+        .f3 {flex: 3; height: 420px; flex-shrink: 0;}
+        .f4 {flex: 4; height: 420px; flex-shrink: 0;}
+        .f5 {flex: 5; height: 420px; flex-shrink: 0;}
+        .f6 {flex: 6; height: 420px; flex-shrink: 0;}
+        .f7 {flex: 7; height: 420px; flex-shrink: 0;}
+        .f8 {flex: 8; height: 420px; flex-shrink: 0;}
+        .f9 {flex: 9; height: 420px; flex-shrink: 0;}
+
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+        <ul class="slieder-item-container">
+            <li>
+                <div class="box">
+                    <div class="left-img f3">
+                        <a target="_blank" href="../images/urban-1.png"><img src="../images/urban-1.png"></a>
+                    </div>
+                    <!-- <div class="f1"></div> -->
+                    <div class="right-abs f7">
+                        <span><i><b>Abstract</b></i>——As a flexible public transportation in urban areas, taxis play an important role in providing comfortable and convenient services for passengers. Due to the existence of the imbalance between supply of drivers and demand of passengers, an accurate fine-grained taxi demand prediction in real time can help guide drivers to plan their routes and reduce the waiting time of passengers. Recently, several methods based on deep neural networks have been provided to predict taxi demands. However, these works are limited in properly incorporating multi-view features of taxi demands together, with considering the influences of context information. In this paper, we propose a convolutional recurrent network model for fine-grained taxi demand prediction. Local convolutional layers and gated recurrent units are employed in our model to extract multi-view spatial–temporal features of taxi demands. Moreover, a novel context-aware attention module is designed to incorporate the predictions of each region with considering its contextual information, which is our first attempt. We also conduct comprehensive experiments based on multiple real-world datasets in New York City and Chengdu. The experimental results show that our model outperforms state-of-the-art methods, and validate the usefulness of each module in our model.</span>
+                    </div>
+                </div>
+                
+            </li>
+            <li>
+                <div class="box">
+                    <div class="left-img f2">
+                        <a target="_blank" href="../images/urban-2.png"><img src="../images/urban-2.png"></a>
+                    </div>
+                    <!-- <div class="f1"></div> -->
+                    <div class="right-abs f8">
+                        <span><i><b>Abstract</b></i>——As an environment-friendly public transport, shared bikes have become an important urban transport, providing cheap and convenient services for urban residents. However, the number of docks of a station in a bike sharing system is ﬁxed when it is built, and there exists imbalance between bike usage and supply in reality. An accurate real-time free dock prediction can help guide users to choose a proper station (with free bikes/docks) to rent or return a bike. Many earlier efforts are paid to do bike sharing prediction based on model-based approaches. Recently, deep neural networks (DNN), like convolutional neural networks (CNN) and recurrent neural networks (RNN), have been introduced to solve trafﬁc prediction problems. However, three are some unsolved issues to make accurate real-time free dock prediction, such as learning complicated temporal variation and periodicity of bike usage, spatial correlations of free docks among different stations, and the impact of external factors like weather. To overcome these challenges, we propose a novel deep neural network model, which combines graph convolution and a residual structure together. We ﬁrst model a bike sharing system as a weighted graph, and the non-Euclidean spatial correlations among stations (represented by weighted edges in the graph) are extracted by random walk operation in graph convolution layers. Moreover, periodic patterns of free docks in different time scales are captured by a residual structure, and external factors are considered to improve the accuracy of prediction. We also conduct comprehensive experiments based on a public real-world dataset of riding trips from Boston, and the results show that our method outperforms state-of-the-art baselines.</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <div class="left-img f2">
+                        <a target="_blank" href="../images/urban-3.png"><img src="../images/urban-3.png"></a>
+                    </div>
+                    <!-- <div class="f1"></div> -->
+                    <div class="right-abs f8">
+                        <span><i><b>Abstract</b></i>——Short-term passenger ﬂow forecasting is signiﬁcantly important in the urban rail transit system. However, there are many factors that affect passenger ﬂows, and traditional statistical prediction methods are unable to model these complex factors comprehensively. Emerging deep learning models have become effective methods to overcome this problem. In this study, we propose a new deep learning model MGSTCN (Multi-Graph Spatio-Temporal Convolutional Network) to predict short-term passenger ﬂows for all stations in an urban subway network. Speciﬁcally, MGSTCN is composed of three modules with the same structure, which models the temporal dependencies of passenger ﬂows in three different time scales, i.e., recent, daily and weekly periods respectively. Each module contains three main components: a multi-graph convolutional layer, a feature fusion layer, and a recurrent neural network. In addition, we construct three topological graphs based on the subway network, station attributes, and passenger ﬂow trends, to extract spatial features from different perspectives through graph convolutional networks. Besides, we also employ some external factors such as weather conditions and holidays to enhance the forecasting accuracy of our proposed model. We conduct experiments based on two real-world passenger ﬂow datasets in Shanghai and Hangzhou, respectively. The results show that our proposed model has superior performance compared to the baselines.</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <div class="left-img f2">
+                        <a target="_blank" href="../images/urban-4.png"><img src="../images/urban-4.png"></a>
+                    </div>
+                    <!-- <div class="f1"></div> -->
+                    <div class="right-abs f8">
+                        <span><i><b>Abstract</b></i>——Metro systems play a significant role of urban transportation in large cities. It is critical for metro system managers to understand load factors of trains. Although the wide deployment of automated fare collection (AFC) system brings us a lot of convenience, only the information likes tap-in and tap-out time stamp and stations of each trip can be directly obtained from AFC records, the train and the route chosen by the passengers are uncertain. The information is necessary for achieving the load factors of trains. Considering that AFC records contain the no-transfer trips, one-transfer trips and multi-transfer trips, the problem becomes particularly complicated. Benefiting from machine learning, we propose an effective data-mining method to better understand the train and route chosen by a passenger with considering the impacts of time and space. We also classify passengers based on the similarity of passenger travel characteristics, which can automatically select the initial cluster centres in data. We validate our approach using a large-scale dataset collected from the Shanghai Metro system, and results demonstrate that our approach works effectively.</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="arrow-container">
+            <span class="left-arrow"><</span>
+            <span class="right-arrow">></span>
+        </div>
+        <div class="indicator-container">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+
+            <!-- <span class="indicator"></span> -->
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var autoplay = true;
+    var autoplay_Delay = 2000; // ms
+    var autoplayId;
+    var intervalId;
+
+    var slider;
+    var slider_item_container;
+    var slider_items;
+    var indicator_container;
+
+    var slider_item_width;
+    var curIndex = 0;
+
+    window.onload = function () {
+        initElement();
+        initEvent();
+        if (autoplay) {
+            startAnimation(slider_item_container);
+        }
+    }
+
+    function initElement() {
+        slider = document.getElementById("slider");
+        slider_items = slider.getElementsByTagName("li");
+        slider_item_container = slider.getElementsByClassName("slieder-item-container")[0];
+        indicator_container = slider.getElementsByClassName("indicator-container")[0];
+
+        var firstItem = slider_items[0].cloneNode(true);
+        slider_item_container.appendChild(firstItem);
+
+        slider_item_width = slider_items[0].offsetWidth;
+    }
+
+    function initEvent() {
+        slider.addEventListener("mouseover", function () {
+            clearTimeout(autoplayId);
+            autoplay = false;
+        });
+        slider.addEventListener("mouseout", function () {
+            autoplay = true;
+            startAnimation(slider_item_container);
+        });
+
+        var indicators = indicator_container.children;
+        for (var i = 0; i < indicators.length; i++) {
+            indicators[i].setAttribute("index", i);
+            indicators[i].addEventListener("click", function () {
+                var index = parseInt(this.getAttribute("index"));
+                next(index);
+            });
+        }
+
+        var left_arrow = slider.getElementsByClassName("left-arrow")[0];
+        var right_arrow = slider.getElementsByClassName("right-arrow")[0];
+        left_arrow.addEventListener("click", function () {
+            prev();
+        });
+        right_arrow.addEventListener("click", function () {
+            next();
+        });
+    }
+
+    function animate(element, target) {
+        var step = 10;
+        var time = 10;
+        var gap = (Math.abs(target - element.offsetLeft) / slider_item_width);
+        if (gap > 1) {
+            step = step * gap;
+            time = time / gap;
+        }
+        if (element) {
+            step = (element.offsetLeft > target) ? -step : step;
+            clearInterval(intervalId);
+            setCurrentActiveIndicator(curIndex);
+            intervalId = setInterval(function () {
+                if ((step < 0) && (Math.abs(element.offsetLeft + step) < Math.abs(target))) {
+                    element.style.left = element.offsetLeft + step + "px";
+                } else {
+                    if (Math.abs(target - element.offsetLeft) > Math.abs(step)) {
+                        element.style.left = element.offsetLeft + step + "px";
+                    } else {
+                        clearInterval(intervalId);
+                        intervalId = -1;
+                        element.style.left = target + "px";
+                        if (autoplay) {
+                            startAnimation(element);
+                        }
+                    }
+                }
+            }, time);
+        }
+    }
+
+    function prev() {
+        var element = slider_item_container;
+        var li = element.children;
+        curIndex = curIndex - 1;
+        if (curIndex < 0) {
+            element.style.left = -((li.length - 1) * slider_item_width) + "px";
+            curIndex = li.length - 2;
+        }
+        animate(element, -(curIndex * slider_item_width));
+    }
+
+    function next(nextIndex) {
+        var element = slider_item_container;
+        var li = element.children;
+        if ((nextIndex != null) && (typeof (nextIndex) != "undefined")) {
+            curIndex = nextIndex;
+        } else {
+            curIndex = curIndex + 1;
+            if (curIndex > (li.length - 1)) {
+                element.style.left = 0 + "px";
+                curIndex = 1;
+            }
+        }
+        animate(element, -(curIndex * slider_item_width));
+    }
+
+    function startAnimation(element) {
+        if (autoplayId) {
+            clearTimeout(autoplayId);
+        }
+        autoplayId = setTimeout(function () {
+            next();
+        }, autoplay_Delay);
+    }
+
+    function setCurrentActiveIndicator(index) {
+        var indicators = indicator_container.children;
+        if (index == indicators.length) {
+            index = 0;
+        }
+        for (var i = 0; i < indicators.length; i++) {
+            if (i == index) {
+                indicators[i].className = "indicator active";
+            } else {
+                indicators[i].className = "indicator";
+            }
+        }
+    }
+</script>

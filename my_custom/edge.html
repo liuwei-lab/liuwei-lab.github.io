@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+* {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            margin: 5px 0 0 0;
+        }
+        #slider,
+        ul,
+        a {
+            width: 100%;
+            height: 420px;
+        }
+
+        #slider {
+            position: absolute;
+            /* border: 2px solid black; */
+            /*padding: 3px;*/
+            margin: 0 0;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        ul {
+            position: absolute;
+            list-style-type: none;
+            width: 6000px;
+            /*transition-duration: 0.3s;*/
+        }
+
+        li {
+            float: left;
+            width: 940px;
+            height: 420px;
+        }
+
+        a {
+            /* width: 647.2px; */
+            height: 420px;
+            display: inline-block;
+        }
+        a:link, a:visited, a:active, a:hover {
+            color: #333;
+            text-decoration: none;
+        }
+
+        img {
+            height: 420px;
+            zoom: 90%;
+            /* margin-top: 25px 0; */
+            /* display: inline; */
+            vertical-align: middle;
+        }
+
+        #slider:hover .arrow-container {
+            display: block;
+        }
+
+        .arrow-container {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            top: 50%;
+            margin-top: -40px;
+            display: none;
+        }
+
+        .arrow-container span {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            /*display: inline-block;*/
+            text-align: center;
+            line-height: 50px;
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .left-arrow {
+            left: 0px;
+            cursor: pointer;
+        }
+
+        .right-arrow {
+            right: 0px;
+            cursor: pointer;
+        }
+
+        .indicator-container {
+            position: absolute;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -75px;
+            text-align: center;
+        }
+
+        .indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background: rgba(138, 134, 134, 0.3);
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background: red;
+        }
+        
+        .box {
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: row;
+            justify-content: space-between;
+            vertical-align: middle;
+            align-items: center;
+        }
+        .left-img {
+            margin-right: 25px;
+        }
+        .right-abs {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: justify;
+            font: 14px Arial, Helvetica, sans-serif, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei;
+            line-height: 1.6em;
+        }
+        .right-abs:hover {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: justify;
+            cursor: pointer;
+        }
+        .right-abs span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .f1 {flex: 1; height: 420px; flex-shrink: 0;}
+        .f2 {flex: 2; height: 420px; flex-shrink: 0;}
+        .f3 {flex: 3; height: 420px; flex-shrink: 0;}
+        .f4 {flex: 4; height: 420px; flex-shrink: 0;}
+        .f5 {flex: 5; height: 420px; flex-shrink: 0;}
+        .f6 {flex: 6; height: 420px; flex-shrink: 0;}
+        .f7 {flex: 7; height: 420px; flex-shrink: 0;}
+        .f8 {flex: 8; height: 420px; flex-shrink: 0;}
+        .f9 {flex: 9; height: 420px; flex-shrink: 0;}
+
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+        <ul class="slieder-item-container">
+            <li>
+                <div class="box">
+                    <div class="left-img f3">
+                        <a target="_blank" href="../images/edge-1-1.png"><img src="../images/edge-1-1.png"></a>
+                    </div>
+                    <!-- <div class="f1"></div> -->
+                    <div class="right-abs f7">
+                        <span><i><b>Abstract</b></i>——Due to the explosion of mobile devices and the evolution of wireless communication technologies, novel applications with intensive computation demands and low-latency requirements have arisen. Edge computing has been proposed as an extension of cloud computing, which moves computation workloads from remote cloud to network edge. Cooperating edge computing and cloud computing can signiﬁcantly reduce the latency of computation tasks. However, considering the heterogeneity and stochastic arrivals of tasks and the limited computation and communication resources on the edge, task ofﬂoading and resource allocation are two joint crucial problems in an edge-cloud orchestrated computing system. In this paper, we propose an online task ofﬂoading and resource allocation approach for edge-cloud orchestrated computing, with the aim to minimize the average latency of tasks over time. We ﬁrstly build system models to analyze the latency and energy consumption incurred under different computing modes and formally formulate the joint problem as a mixed-integer optimal decision problem. Then, we employ Lyapunov optimization and duality theory to decompose the problem into a set of subproblems, which can be solved in a semi-decentralized way. We also formally analyze that our approach can achieve near-optimal performance. Extensive simulations are conducted to verify the superiority of our approach.</span>
+                    </div>
+                </div>
+                
+            </li>
+            <li>
+                <div class="box">
+                    <div class="left-img f4">
+                        <a target="_blank" href="../images/edge-1-2.png"><img src="../images/edge-1-2.png"></a>
+                    </div>
+                    <!-- <div class="f1"></div> -->
+                    <div class="right-abs f6">
+                        <span><i><b>Abstract</b></i>——Multi-access Edge Computing (MEC) comes forth as a promising computing paradigm to meet the low-delay requirements of computation-intensive applications. In this work, we focus on the task ofﬂoading and dispatching problem in MEC, where mobile devices (MDs) can decide to execute tasks locally or ofﬂoad them to access points (APs), and each AP can dispatch its received tasks to other APs. Specially, we consider both APs and MDs are selﬁsh, which aim to minimize their respective task completion delay. The problem is particularly difﬁcult, as there exists computing resource competition among MDs and APs, respectively. Furthermore, the ofﬂoading decisions made by MDs and the dispatching decisions made by APs are interactive. To overcome the challenges, we ﬁrst formulate the problem as a multi-leader multi-follower Stackelberg game, and rigorously prove the existence of a Stackelberg equilibrium. Then, we propose an efﬁcient approach to achieve a Stackelberg equi-librium, which includes a Q-learning based ofﬂoading strategy for MDs and a best response based dispatching strategy for APs. We also demonstrate an upper bound of the total completion delay achieved by our approach with a constant approximation ratio. Extensive simulations are also conducted to show the performance of our approach, compared with baselines.</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="arrow-container">
+            <span class="left-arrow"><</span>
+            <span class="right-arrow">></span>
+        </div>
+        <div class="indicator-container">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <!-- <span class="indicator"></span> -->
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var autoplay = true;
+    var autoplay_Delay = 2000; // ms
+    var autoplayId;
+    var intervalId;
+
+    var slider;
+    var slider_item_container;
+    var slider_items;
+    var indicator_container;
+
+    var slider_item_width;
+    var curIndex = 0;
+
+    window.onload = function () {
+        initElement();
+        initEvent();
+        if (autoplay) {
+            startAnimation(slider_item_container);
+        }
+    }
+
+    function initElement() {
+        slider = document.getElementById("slider");
+        slider_items = slider.getElementsByTagName("li");
+        slider_item_container = slider.getElementsByClassName("slieder-item-container")[0];
+        indicator_container = slider.getElementsByClassName("indicator-container")[0];
+
+        var firstItem = slider_items[0].cloneNode(true);
+        slider_item_container.appendChild(firstItem);
+
+        slider_item_width = slider_items[0].offsetWidth;
+    }
+
+    function initEvent() {
+        slider.addEventListener("mouseover", function () {
+            clearTimeout(autoplayId);
+            autoplay = false;
+        });
+        slider.addEventListener("mouseout", function () {
+            autoplay = true;
+            startAnimation(slider_item_container);
+        });
+
+        var indicators = indicator_container.children;
+        for (var i = 0; i < indicators.length; i++) {
+            indicators[i].setAttribute("index", i);
+            indicators[i].addEventListener("click", function () {
+                var index = parseInt(this.getAttribute("index"));
+                next(index);
+            });
+        }
+
+        var left_arrow = slider.getElementsByClassName("left-arrow")[0];
+        var right_arrow = slider.getElementsByClassName("right-arrow")[0];
+        left_arrow.addEventListener("click", function () {
+            prev();
+        });
+        right_arrow.addEventListener("click", function () {
+            next();
+        });
+    }
+
+    function animate(element, target) {
+        var step = 10;
+        var time = 10;
+        var gap = (Math.abs(target - element.offsetLeft) / slider_item_width);
+        if (gap > 1) {
+            step = step * gap;
+            time = time / gap;
+        }
+        if (element) {
+            step = (element.offsetLeft > target) ? -step : step;
+            clearInterval(intervalId);
+            setCurrentActiveIndicator(curIndex);
+            intervalId = setInterval(function () {
+                if ((step < 0) && (Math.abs(element.offsetLeft + step) < Math.abs(target))) {
+                    element.style.left = element.offsetLeft + step + "px";
+                } else {
+                    if (Math.abs(target - element.offsetLeft) > Math.abs(step)) {
+                        element.style.left = element.offsetLeft + step + "px";
+                    } else {
+                        clearInterval(intervalId);
+                        intervalId = -1;
+                        element.style.left = target + "px";
+                        if (autoplay) {
+                            startAnimation(element);
+                        }
+                    }
+                }
+            }, time);
+        }
+    }
+
+    function prev() {
+        var element = slider_item_container;
+        var li = element.children;
+        curIndex = curIndex - 1;
+        if (curIndex < 0) {
+            element.style.left = -((li.length - 1) * slider_item_width) + "px";
+            curIndex = li.length - 2;
+        }
+        animate(element, -(curIndex * slider_item_width));
+    }
+
+    function next(nextIndex) {
+        var element = slider_item_container;
+        var li = element.children;
+        if ((nextIndex != null) && (typeof (nextIndex) != "undefined")) {
+            curIndex = nextIndex;
+        } else {
+            curIndex = curIndex + 1;
+            if (curIndex > (li.length - 1)) {
+                element.style.left = 0 + "px";
+                curIndex = 1;
+            }
+        }
+        animate(element, -(curIndex * slider_item_width));
+    }
+
+    function startAnimation(element) {
+        if (autoplayId) {
+            clearTimeout(autoplayId);
+        }
+        autoplayId = setTimeout(function () {
+            next();
+        }, autoplay_Delay);
+    }
+
+    function setCurrentActiveIndicator(index) {
+        var indicators = indicator_container.children;
+        if (index == indicators.length) {
+            index = 0;
+        }
+        for (var i = 0; i < indicators.length; i++) {
+            if (i == index) {
+                indicators[i].className = "indicator active";
+            } else {
+                indicators[i].className = "indicator";
+            }
+        }
+    }
+</script>
